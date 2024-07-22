@@ -146,25 +146,25 @@
 // console.log(nestedFn()); // ?
 // console.log(nestedFn()); // ?
 
-function buildTicket(transport) {
-  let numOfPassengers = 0;
-  return function (name) {
-    return (
-      "Hello Mr./Ms. " +
-      name +
-      "\n" +
-      "You are going via " +
-      transport +
-      "\n" +
-      "Your ticket Id is #" +
-      ++numOfPassengers
-    );
-  };
-}
+// function buildTicket(transport) {
+//   let numOfPassengers = 0;
+//   return function (name) {
+//     return (
+//       "Hello Mr./Ms. " +
+//       name +
+//       "\n" +
+//       "You are going via " +
+//       transport +
+//       "\n" +
+//       "Your ticket Id is #" +
+//       ++numOfPassengers
+//     );
+//   };
+// }
 
-let shipFn = buildTicket("Ship");
-console.log(shipFn("John"));
-console.log(shipFn("Jenny"));
+// let shipFn = buildTicket("Ship");
+// console.log(shipFn("John"));
+// console.log(shipFn("Jenny"));
 
-let kangarooFn = buildTicket("Kangaroo");
-console.log(kangarooFn("James"));
+// let kangarooFn = buildTicket("Kangaroo");
+// console.log(kangarooFn("James"));

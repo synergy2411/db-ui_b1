@@ -31,7 +31,26 @@
         </aside>
 
         <main>
-          <section>
+          <form>
+            <table>
+              <!-- message body -->
+              <tr>
+                <td><label for="body">Your message:</label></td>
+                <td><input type="text" id="body" /></td>
+              </tr>
+              <!-- author name -->
+              <tr>
+                <td><label for="author">Author name:</label></td>
+                <td><input type="text" id="author" /></td>
+              </tr>
+              <!-- buttons -->
+              <tr>
+                <td><button id="btn-add">Add</button></td>
+              </tr>
+            </table>
+          </form>
+
+          <section id="blog-section">
             <article>
               <blockquote>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -44,7 +63,7 @@
                 <cite>Perspiciatis consequatur.</cite>
               </blockquote>
             </article>
-            <article>
+            <!-- <article>
               <img
                 src="https://media.istockphoto.com/id/183821822/photo/say.jpg?s=612x612&w=0&k=20&c=kRmCjTzA9cq4amgRgeHkZsZuvxezUtC8wdDYfKg-mho="
                 alt=""
@@ -54,7 +73,7 @@
                 <li>Consectetur adipisicing elit.</li>
                 <li>Amet consectetur adipisicing elit.</li>
               </ul>
-            </article>
+            </article> -->
           </section>
         </main>
       </div>
@@ -69,5 +88,6 @@
     </script> -->
 
     <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

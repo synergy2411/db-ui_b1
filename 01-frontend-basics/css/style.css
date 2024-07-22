@@ -16,6 +16,7 @@ body {
   margin: 0 auto;
   border-top: 5px tomato solid;
   border-bottom: 5px tomato solid;
+  font-size: 1.8rem;
 }
 
 header {
@@ -67,7 +68,7 @@ h3 {
 
 footer {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 2.4rem;
 }
 
 /* a[href="http://www.google.com"]
@@ -82,16 +83,16 @@ footer {
   background-color: goldenrod;
 }
 
-p::first-letter {
-  font-size: 2.2rem; /* 10 * 2 = 20px */
+/* p::first-letter {
+  font-size: 2.2rem; /* 10 * 2 = 20px 
   color: tomato;
-}
+} */
 
 img {
   max-width: 50%;
 }
 
-@media screen and (max-width: 950px) {
+/* @media screen and (max-width: 950px) {
   .container {
     background-color: rgb(231, 147, 147);
   }
@@ -113,8 +114,30 @@ img {
   header > nav > ul {
     flex-direction: column;
   }
+} */
+
+/* a[href$="in"] {
+  font-size: 2rem;
+} */
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
 }
 
-a[href$="in"] {
-  font-size: 2rem;
+button {
+  padding: 12px 24px;
+  border: none;
+  background-color: rgb(229, 247, 229);
+  color: rgb(2, 73, 2);
+  margin-bottom: 16px;
+}
+button:hover {
+  background-color: rgb(115, 245, 115);
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
 }
