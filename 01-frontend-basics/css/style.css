@@ -114,3 +114,7 @@ img {
     flex-direction: column;
   }
 }
+
+a[href$="in"] {
+  font-size: 2rem;
+}
