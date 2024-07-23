@@ -2,7 +2,7 @@ import { useState } from "react";
 import classes from "./AddTodo.module.css";
 
 function AddTodo(props) {
-  const [enteredLabel, setEnteredLabel] = useState("Hello");
+  const [enteredLabel, setEnteredLabel] = useState("");
 
   const labelChangeHanlder = (event) => {
     setEnteredLabel(event.target.value);
@@ -11,6 +11,7 @@ function AddTodo(props) {
   const submitHandler = (event) => {
     event.preventDefault();
     props.addNewTodo(enteredLabel);
+    setEnteredLabel("");
   };
   return (
     <form className={classes["the-form"]} onSubmit={submitHandler}>

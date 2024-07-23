@@ -5,9 +5,7 @@ import AddTodo from "./AddTodo/AddTodo";
 let INITIAL_TODOS = [
   { id: "t001", label: "pot the plants", status: "pending" },
   { id: "t002", label: "buy the pulses", status: "completed" },
-  { id: "t003", label: "iron the jeans", status: "pending" },
-  { id: "t004", label: "renew car insurance", status: "completed" },
-  { id: "t005", label: "buy T-shirts", status: "pending" },
+  { id: "t003", label: "renew car insurance", status: "completed" },
 ];
 
 function Todos() {
@@ -24,7 +22,7 @@ function Todos() {
 
   return (
     <>
-      <h2>My Todos</h2>
+      <h1 style={{ textAlign: "center", fontSize: "48px" }}>My Todos</h1>
 
       <div style={{ marginBottom: "24px" }}>
         <AddTodo addNewTodo={onAddNewTodo} />

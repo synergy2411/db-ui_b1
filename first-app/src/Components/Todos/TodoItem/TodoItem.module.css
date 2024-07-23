@@ -5,3 +5,26 @@
   box-shadow: 0 1px 25px rgba(0, 0, 0, 0.5);
   max-width: 40vw;
 }
+
+.span-el {
+  float: right;
+  background-color: green;
+  color: #fff;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.btn-delete {
+  border: none;
+  background-color: #fff;
+  color: #111;
+  padding: 8px 16px;
+  margin-right: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  border: 1px rgb(236, 102, 102) solid;
+  color: #222;
+}
