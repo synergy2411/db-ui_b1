@@ -108,30 +108,30 @@
 // - Rejected / Failure
 
 // Promise Producer
-function producerFn() {
-  let promiseObj = new Promise((resolve, reject) => {
-    // Simulate the delayed behaviour
-    setTimeout(() => {
-      // resolve({ message: "Success" });
-      reject(new Error("Something went wrong..."));
-    }, 2000);
-  });
+// function producerFn() {
+//   let promiseObj = new Promise((resolve, reject) => {
+//     // Simulate the delayed behaviour
+//     setTimeout(() => {
+//       // resolve({ message: "Success" });
+//       reject(new Error("Something went wrong..."));
+//     }, 2000);
+//   });
 
-  return promiseObj;
-}
+//   return promiseObj;
+// }
 
 // Promise Consumer
 // - then().catch()
 // - Async...await
 
-async function consumerFn() {
-  try {
-    let response = await producerFn();
-    console.log("Async Response : ", response);
-  } catch (err) {
-    console.error(err);
-  }
-}
+// async function consumerFn() {
+//   try {
+//     let response = await producerFn();
+//     console.log("Async Response : ", response);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
 
 // function consumerFn() {
 //   producerFn()
@@ -143,6 +143,10 @@ async function consumerFn() {
 //     .catch((err) => console.error(err));
 // }
 
-console.log("Promise started");
-consumerFn();
-console.log("Promise ended");
+// console.log("Promise started");
+// consumerFn();
+// console.log("Promise ended");
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));

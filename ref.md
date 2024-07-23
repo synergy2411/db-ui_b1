@@ -17,3 +17,9 @@ Tea Break : 4:00PM (15 minutes)
 - HTML : contents available on webpage
 - CSS : adding CSS Rules
 - JavaScript : add behaviour to application
+
+# To create React project
+
+- npx create-react-app first-app
+- cd first-app
+- npm start
