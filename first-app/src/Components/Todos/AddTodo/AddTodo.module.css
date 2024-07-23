@@ -1,0 +1,24 @@
+.the-form {
+  width: 40vw;
+  margin-left: 30vw;
+  padding: 12px;
+}
+
+.input-field {
+  padding: 12px;
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+.btn-add {
+  border: none;
+  background-color: rgb(167, 239, 167);
+  color: rgb(1, 39, 1);
+  padding: 16px 32px;
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+.btn-add:hover {
+  background-color: rgb(117, 245, 117);
+}

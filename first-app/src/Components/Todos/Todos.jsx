@@ -1,17 +1,25 @@
+import { useState } from "react";
 import TodoItem from "./TodoItem/TodoItem";
+import AddTodo from "./AddTodo/AddTodo";
+
+let INITIAL_TODOS = [
+  { id: "t001", label: "pot the plants", status: "pending" },
+  { id: "t002", label: "buy the pulses", status: "completed" },
+  { id: "t003", label: "iron the jeans", status: "pending" },
+  { id: "t004", label: "renew car insurance", status: "completed" },
+  { id: "t005", label: "buy T-shirts", status: "pending" },
+];
 
 function Todos() {
-  let todos = [
-    { id: "t001", label: "pot the plants", status: "pending" },
-    { id: "t002", label: "buy the pulses", status: "completed" },
-    { id: "t003", label: "iron the jeans", status: "pending" },
-    { id: "t004", label: "renew car insurance", status: "completed" },
-    { id: "t005", label: "buy T-shirts", status: "pending" },
-  ];
+  const [todos, setTodos] = useState(INITIAL_TODOS);
 
   return (
     <>
       <h2>My Todos</h2>
+
+      <div style={{ marginBottom: "24px" }}>
+        <AddTodo />
+      </div>
 
       <ul style={{ listStyle: "none" }}>
         {todos.map((todo) => (
