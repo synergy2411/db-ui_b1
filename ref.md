@@ -11,3 +11,9 @@ Tea Break : 4:00PM (15 minutes)
 2. Execution Phase :
 
 - executes those stored functions
+
+# Day 01
+
+- HTML : contents available on webpage
+- CSS : adding CSS Rules
+- JavaScript : add behaviour to application

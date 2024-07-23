@@ -93,9 +93,56 @@
 // DEEFAULT PARAMTER
 // - Overriden by supplied value
 
-function demoFn(arr = []) {
-  return arr.length;
+// function demoFn(arr = []) {
+//   return arr.length;
+// }
+
+// console.log(demoFn());
+// console.log(demoFn([21, 23, 43]));
+
+// ---------------
+// PROMISES : placeholder for future value
+// - Pending :
+// - Settled :
+// - Resolved / Success
+// - Rejected / Failure
+
+// Promise Producer
+function producerFn() {
+  let promiseObj = new Promise((resolve, reject) => {
+    // Simulate the delayed behaviour
+    setTimeout(() => {
+      // resolve({ message: "Success" });
+      reject(new Error("Something went wrong..."));
+    }, 2000);
+  });
+
+  return promiseObj;
 }
 
-console.log(demoFn());
-console.log(demoFn([21, 23, 43]));
+// Promise Consumer
+// - then().catch()
+// - Async...await
+
+async function consumerFn() {
+  try {
+    let response = await producerFn();
+    console.log("Async Response : ", response);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// function consumerFn() {
+//   producerFn()
+//     .then((response) => {
+//       console.log("RESPONSE : ", response);
+//       return response.message;
+//     })
+//     .then((result) => console.log("result : ", result))
+//     .catch((err) => console.error(err));
+// }
+
+console.log("Promise started");
+consumerFn();
+console.log("Promise ended");
