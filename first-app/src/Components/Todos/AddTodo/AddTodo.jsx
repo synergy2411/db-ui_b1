@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./AddTodo.module.css";
 
-function AddTodo(props) {
+const AddTodo = (props) => {
   const [enteredLabel, setEnteredLabel] = useState("");
 
   const labelChangeHanlder = (event) => {
@@ -30,7 +30,7 @@ function AddTodo(props) {
       </button>
     </form>
   );
-}
+};
 
 export default AddTodo;
 

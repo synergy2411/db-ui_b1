@@ -23,3 +23,11 @@ Tea Break : 4:00PM (15 minutes)
 - npx create-react-app first-app
 - cd first-app
 - npm start
+
+# React Purpose -> render the UI quickly and efficiently
+
+# Side Effect -
+
+- XHR Call
+- Reading file
+- Changing the state
