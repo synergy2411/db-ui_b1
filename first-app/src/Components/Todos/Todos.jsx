@@ -13,12 +13,21 @@ let INITIAL_TODOS = [
 function Todos() {
   const [todos, setTodos] = useState(INITIAL_TODOS);
 
+  const onAddNewTodo = (label) => {
+    let newTodo = {
+      id: "t00" + (todos.length + 1),
+      label: label,
+      status: "pending",
+    };
+    setTodos((prevTodos) => [newTodo, ...prevTodos]);
+  };
+
   return (
     <>
       <h2>My Todos</h2>
 
       <div style={{ marginBottom: "24px" }}>
-        <AddTodo />
+        <AddTodo addNewTodo={onAddNewTodo} />
       </div>
 
       <ul style={{ listStyle: "none" }}>
