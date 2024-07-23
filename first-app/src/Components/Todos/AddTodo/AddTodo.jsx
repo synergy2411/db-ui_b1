@@ -10,9 +10,16 @@ const AddTodo = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    if (enteredLabel.trim() === "") {
+      return;
+    }
+    if (enteredLabel.length <= 5) {
+      return;
+    }
     props.addNewTodo(enteredLabel);
     setEnteredLabel("");
   };
+
   return (
     <form className={classes["the-form"]} onSubmit={submitHandler}>
       {/* input - label */}

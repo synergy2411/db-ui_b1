@@ -1,10 +1,10 @@
-import UncontrolledComp from "./Components/Demo/UncontrolledComp";
+import UseEffectDemo from "./Components/Demo/UseEffectDemo";
 import Todos from "./Components/Todos/Todos";
 
 function App() {
   return (
     <div>
-      <UncontrolledComp />
+      <UseEffectDemo />
       <Todos />
     </div>
   );

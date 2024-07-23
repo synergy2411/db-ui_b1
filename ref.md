@@ -31,3 +31,21 @@ Tea Break : 4:00PM (15 minutes)
 - XHR Call
 - Reading file
 - Changing the state
+
+# UseEffect Hook flavors
+
+- useEffect(cb, []) - (componentDidMount)
+
+  > cb executes only ONCE after the initial rendering of component
+
+- useEffect(cb, [Dependencies]) - (componentDidUpdate)
+
+  > cb will execute after the initial rendering of component
+  > cb will execute again whenever the component re-render with dependency change
+
+- useEffect(cb => cleanUpFn, [Dependencies])
+  > cb will execute after the initial rendering of component
+  > Dependencies will change
+  > cleanUpFn will execute after the dependencies change
+  > cb will execute after the cleanUpFn
+  > cleanUpFn will also run when the component is about to unload / expires - (componentWillUnmount)
