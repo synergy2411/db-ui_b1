@@ -1,15 +1,21 @@
-function Todos() {
-  let username = "John Doe";
-  let isAdmin = false;
+import TodoItem from "./TodoItem/TodoItem";
 
-  let btnClicked = () => alert("Who's this?");
+function Todos() {
+  let todos = [
+    { id: "t001", label: "pot the plants", status: "pending" },
+    { id: "t002", label: "buy the pulses", status: "completed" },
+    { id: "t003", label: "iron the jeans", status: "pending" },
+    { id: "t004", label: "renew car insurance", status: "completed" },
+    { id: "t005", label: "buy T-shirts", status: "pending" },
+  ];
 
   return (
     <>
-      <h2 className="">Todos coming soon...</h2>
-      <p>User name : {username}</p>
-      <p>User is {isAdmin ? "" : "NOT"} Admin.</p>
-      <button onClick={btnClicked}>Click Me</button>
+      <h2 className="">My Todos</h2>
+
+      {todos.map((todo) => (
+        <TodoItem id={todo.id} label={todo.label} status={todo.status} />
+      ))}
     </>
   );
 }
