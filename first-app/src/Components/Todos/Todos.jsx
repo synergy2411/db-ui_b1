@@ -11,11 +11,18 @@ function Todos() {
 
   return (
     <>
-      <h2 className="">My Todos</h2>
+      <h2>My Todos</h2>
 
-      {todos.map((todo) => (
-        <TodoItem id={todo.id} label={todo.label} status={todo.status} />
-      ))}
+      <ul style={{ listStyle: "none" }}>
+        {todos.map((todo) => (
+          <TodoItem
+            key={todo.id}
+            id={todo.id}
+            label={todo.label}
+            status={todo.status}
+          />
+        ))}
+      </ul>
     </>
   );
 }
