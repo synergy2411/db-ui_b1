@@ -1,8 +1,7 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import Output from "./Output";
-import { act } from "react";
 
 describe("<Output/> Component", () => {
   // Setup and Tear-down
@@ -71,14 +70,14 @@ describe("<Output/> Component", () => {
     expect(paragraphEl).not.toBeNull();
   });
 
-  test("renders not 'Toggle is false' when the button is clicked", () => {
+  test("renders not 'Toggle is false' when the button is clicked", async () => {
     render(<Output />);
 
     const buttonEl = screen.getByRole("button");
 
     fireEvent.click(buttonEl);
 
-    const paragraphEl = screen.queryByText(/Toggle is false/i);
+    const paragraphEl = await screen.findByText(/Toggle is false/i);
 
     expect(paragraphEl).not.toBeInTheDocument();
   });
