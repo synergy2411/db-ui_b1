@@ -95,6 +95,9 @@ Tea Break : 4:00PM (15 minutes)
 1. Action -> Payload
 2. Reducers -> Pure functions
 3. Store -> place to keep the state (immutable object)
+4. useSelector()
+5. useDispatch()
+6. Middleware
 
 # Create React - Redux Project
 
@@ -103,11 +106,6 @@ cd <app-name>
 npm install react-redux @reduxjs/toolkit
 npm install bootstrap
 
-Store ->
-{
-toggle : true,
-posts : [],
-todos : [],
-counter: 0
+---
 
-}
+# Testing
