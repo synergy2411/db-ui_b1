@@ -2,61 +2,84 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import Output from "./Output";
+import { act } from "react";
 
-test("renders h1 element on the document", () => {
-  render(<Output />);
+describe("<Output/> Component", () => {
+  // Setup and Tear-down
 
-  const headingEl = screen.getByText("The output COMPONENT", { exact: false });
-
-  expect(headingEl).toBeInTheDocument();
-});
-
-test("renders paragraph element in the document", () => {
-  render(<Output />);
-
-  const paragraphEl = screen.queryByText("Demo content is available", {
-    exact: false,
+  beforeEach(() => {
+    // Code to run Before each test case
   });
 
-  expect(paragraphEl).not.toBeNull();
-});
+  beforeAll(() => {
+    // Code to run Before first test case
+  });
 
-test("renders not 'something not useful' in the document", () => {
-  render(<Output />);
+  afterEach(() => {
+    // Code to run After each test case
+  });
 
-  const element = screen.queryByText("something not useful");
+  afterAll(() => {
+    // Code to run After last test case
+  });
 
-  expect(element).toBeNull();
-});
+  test("renders h1 element on the document", () => {
+    render(<Output />);
 
-test("renders 'Toggle is false' when initially render the component", () => {
-  render(<Output />);
+    const headingEl = screen.getByText("The output COMPONENT", {
+      exact: false,
+    });
 
-  const paragraphEl = screen.getByText(/Toggle is false/i);
+    expect(headingEl).toBeInTheDocument();
+  });
 
-  expect(paragraphEl).toBeInTheDocument();
-});
+  test("renders paragraph element in the document", () => {
+    render(<Output />);
 
-test("renders 'Toggle is true' when the button is clicked", async () => {
-  render(<Output />);
+    const paragraphEl = screen.queryByText("Demo content is available", {
+      exact: false,
+    });
 
-  const buttonEl = screen.getByRole("button");
+    expect(paragraphEl).not.toBeNull();
+  });
 
-  userEvent.click(buttonEl);
+  test("renders not 'something not useful' in the document", () => {
+    render(<Output />);
 
-  const paragraphEl = await screen.findByText(/Toggle is true/i);
+    const element = screen.queryByText("something not useful");
 
-  expect(paragraphEl).not.toBeNull();
-});
+    expect(element).toBeNull();
+  });
 
-test("renders not 'Toggle is false' when the button is clicked", () => {
-  render(<Output />);
+  test("renders 'Toggle is false' when initially render the component", () => {
+    render(<Output />);
 
-  const buttonEl = screen.getByRole("button");
+    const paragraphEl = screen.getByText(/Toggle is false/i);
 
-  fireEvent.click(buttonEl);
+    expect(paragraphEl).toBeInTheDocument();
+  });
 
-  const paragraphEl = screen.queryByText(/Toggle is false/i);
+  test("renders 'Toggle is true' when the button is clicked", async () => {
+    render(<Output />);
 
-  expect(paragraphEl).not.toBeInTheDocument();
+    const buttonEl = screen.getByRole("button");
+
+    userEvent.click(buttonEl);
+
+    const paragraphEl = await screen.findByText(/Toggle is true/i);
+
+    expect(paragraphEl).not.toBeNull();
+  });
+
+  test("renders not 'Toggle is false' when the button is clicked", () => {
+    render(<Output />);
+
+    const buttonEl = screen.getByRole("button");
+
+    fireEvent.click(buttonEl);
+
+    const paragraphEl = screen.queryByText(/Toggle is false/i);
+
+    expect(paragraphEl).not.toBeInTheDocument();
+  });
 });
