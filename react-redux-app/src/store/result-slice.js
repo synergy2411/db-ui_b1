@@ -11,8 +11,11 @@ const resultSlice = createSlice({
     storeResult(state, action) {
       state.result.unshift(action.payload);
     },
+    deleteResult(state, action) {
+      state.result.splice(action.payload, 1);
+    },
   },
 });
 
 export const resultReducer = resultSlice.reducer;
-export const { storeResult } = resultSlice.actions;
+export const resultActions = resultSlice.actions;

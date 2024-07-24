@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { storeResult } from "../store/result-slice";
+import { resultActions } from "../store/result-slice";
+
+import classes from "./CounterResutl.module.css";
 
 function CounterResult() {
   const { counter } = useSelector((store) => store.ctr);
@@ -13,14 +15,19 @@ function CounterResult() {
           <div className="d-grid">
             <button
               className="btn btn-danger"
-              onClick={() => dispatch(storeResult(counter))}
+              onClick={() => dispatch(resultActions.storeResult(counter))}
             >
               Store Result
             </button>
           </div>
           <ul className="list-group">
-            {result.map((r) => (
-              <li className="list-group-item">{r}</li>
+            {result.map((r, i) => (
+              <li
+                onClick={() => dispatch(resultActions.deleteResult(i))}
+                className={`list-group-item ${classes["my-list-item"]}`}
+              >
+                {r}
+              </li>
             ))}
           </ul>
         </div>
