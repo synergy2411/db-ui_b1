@@ -49,3 +49,56 @@ Tea Break : 4:00PM (15 minutes)
   > cleanUpFn will execute after the dependencies change
   > cb will execute after the cleanUpFn
   > cleanUpFn will also run when the component is about to unload / expires - (componentWillUnmount)
+
+# React : Overview
+
+- Virtual DOM
+- Component (Functional / Class based)
+- Props
+- State (useState())
+- Form Inputs (Controlled / Uncontrolled)
+- useRef()
+- Hooks (new addition - React v16.8)
+- Side-effect Operation (useEffect())
+
+---
+
+1. Redux
+2. Testing
+3. Authentication / Authorization
+4. Primereact
+5. Ag-grid
+
+---
+
+# JavaScript DataTypes
+
+- Primitives : String, Number, Boolean, undefined, null
+- Reference : Array, Objects, Functions, Dates
+
+# Optimizating the Child Component
+
+- useCallback() : Functions
+- useMemo() : Array, Objects, Dates and Functions
+
+# Single source of Truth
+
+- Centralized immutable State
+
+# Pure Functions
+
+- No Side effect inside this function
+- Reducers
+
+# Redux Building Blocks
+
+1. Action -> Payload
+2. Reducers -> Pure functions
+3. Store -> place to keep the state (immutable object)
+
+# Create React - Redux Project
+
+npx create-react-app <app-name>
+cd <app-name>
+npm install react-redux @reduxjs/toolkit
+npm install bootstrap
