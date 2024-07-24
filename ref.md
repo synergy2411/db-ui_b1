@@ -102,3 +102,12 @@ npx create-react-app <app-name>
 cd <app-name>
 npm install react-redux @reduxjs/toolkit
 npm install bootstrap
+
+Store ->
+{
+toggle : true,
+posts : [],
+todos : [],
+counter: 0
+
+}

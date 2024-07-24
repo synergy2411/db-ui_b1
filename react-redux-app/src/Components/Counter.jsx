@@ -1,12 +1,14 @@
 import { useSelector } from "react-redux";
+import CounterButtons from "./CounterButtons";
 
 function Counter() {
   const { counter } = useSelector((store) => store.ctr);
 
   return (
-    <>
-      <h1>Counter : {counter}</h1>
-    </>
+    <div className="text-center">
+      <h1 className="display-4 mb-3">Counter : {counter}</h1>
+      <CounterButtons />
+    </div>
   );
 }
 
